@@ -30,7 +30,19 @@ function getAffixes() {
     var a2 = row.cells[2].innerHTML;
     var a3 = row.cells[3].innerHTML;
     
-    document.getElementById("thisweek").innerHTML = a1 + " " + a2 + " " + a3;
+    
+    function wrapWithIcon(htmlStr) {
+        var match = htmlStr.match(/affix-([A-Za-z]+)/);
+        if (match) {
+            var affixName = match[1];
+            var iconStr = '<img src="assets/img/affixes/' + affixName + '.jpg" class="affix-icon-top" alt="' + affixName + '">';
+            return '<div class="affix-wrapper">' + iconStr + htmlStr + '</div>';
+        }
+        return htmlStr;
+    }
+
+    document.getElementById("thisweek").innerHTML = '<div class="affix-group-container">' + wrapWithIcon(a1) + wrapWithIcon(a2) + wrapWithIcon(a3) + '</div>';
+
     
     row.classList.add("table__row-both");
     row.classList.remove("table__row");
@@ -41,8 +53,12 @@ function getAffixes() {
     var nextRow = document.getElementById(rotation[nextIndex]);
     var wanRow = document.getElementById(rotation[wanIndex]);
     
-    document.getElementById("nextweek").innerHTML = nextRow.cells[1].innerHTML + ", " + nextRow.cells[2].innerHTML + ", " + nextRow.cells[3].innerHTML;
-    document.getElementById("weekafternext").innerHTML = wanRow.cells[1].innerHTML + ", " + wanRow.cells[2].innerHTML + ", " + wanRow.cells[3].innerHTML;
+    
+    document.getElementById("nextweek").innerHTML = '<div class="affix-group-container">' + wrapWithIcon(nextRow.cells[1].innerHTML) + wrapWithIcon(nextRow.cells[2].innerHTML) + wrapWithIcon(nextRow.cells[3].innerHTML) + '</div>';
+
+    
+    document.getElementById("weekafternext").innerHTML = '<div class="affix-group-container">' + wrapWithIcon(wanRow.cells[1].innerHTML) + wrapWithIcon(wanRow.cells[2].innerHTML) + wrapWithIcon(wanRow.cells[3].innerHTML) + '</div>';
+
     
     
     function formatDateRange(startDateTimestamp) {
