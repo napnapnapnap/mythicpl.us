@@ -26,7 +26,7 @@
     <title class="trn">What Mythic Plus Garbage Do I Have To Deal With This Week?</title>
     <main class="main" id="this_week">
         <section class="atf content-block">
-            <h4 class="title title--small tagline trn">what m+ garbage do i have to deal with this week?</h4>
+            <h4 class="title title--small tagline trn">what m+ garbage do i have to deal with this week? <span id="date-thisweek"></span></h4>
             <article class="affixes">
                 <h1 id="thisweek" class="title title--large"></h1><br>
                 <div class="arrow">
@@ -35,11 +35,11 @@
             </article>
         </section>
         <section class="next content-block content-block--small">
-            <h4 class="title title--small tagline trn">Next week</h4>
+            <h4 class="title title--small tagline trn">Next week <span id="date-nextweek"></span></h4>
             <article>
                 <h4 id="nextweek" class="title title--small"></h4>
             </article>
-            <h4 class="next title--small tagline trn">Week after next</h4>
+            <h4 class="next title--small tagline trn">Week after next <span id="date-weekafternext"></span></h4>
             <article>
                 <h4 id="weekafternext" class="title title--small"></h4>
             </article>
@@ -132,6 +132,7 @@
             <table id="sched" class="table">
                 <thead class="table__head">
                     <tr class="table__row table__row--head">
+                        <td class="table__cell trn">Date</td>
                         <td class="table__cell trn">1 (+4)</td>
                         <td class="table__cell trn">2 (+7)</td>
                         <td class="table__cell trn">3 (+10)</td>
@@ -139,41 +140,49 @@
                 </thead>
                 <tbody>
                     <tr id="wk1" class="table__row">
+                        <td class="table__cell" id="date-wk1"></td>
                         <td class="table__cell"><a href="#affix-Raging" style="color: inherit;"><span class="med trn">Raging</span></a></td>
                         <td class="table__cell"><a href="#affix-Necrotic" style="color: inherit;"><span class="hard trn">Necrotic</span></a></td>
                         <td class="table__cell"><a href="#affix-Fortified" style="color: inherit;"><span class="hard trn">Fortified</span></a></td>
                     </tr>
                     <tr id="wk2" class="table__row">
+                        <td class="table__cell" id="date-wk2"></td>
                         <td class="table__cell"><a href="#affix-Bolstering" style="color: inherit;"><span class="med trn">Bolstering</span></a></td>
                         <td class="table__cell"><a href="#affix-Overflowing" style="color: inherit;"><span class="easy trn">Overflowing</span></a></td>
                         <td class="table__cell"><a href="#affix-Tyrannical" style="color: inherit;"><span class="hard trn">Tyrannical</span></a></td>
                     </tr>
                     <tr id="wk3" class="table__row">
+                        <td class="table__cell" id="date-wk3"></td>
                         <td class="table__cell"><a href="#affix-Sanguine" style="color: inherit;"><span class="easy trn">Sanguine</span></a></td>
                         <td class="table__cell"><a href="#affix-Volcanic" style="color: inherit;"><span class="easy trn">Volcanic</span></a></td>
                         <td class="table__cell"><a href="#affix-Fortified" style="color: inherit;"><span class="hard trn">Fortified</span></a></td>
                     </tr>
                     <tr id="wk4" class="table__row">
+                        <td class="table__cell" id="date-wk4"></td>
                         <td class="table__cell"><a href="#affix-Teeming" style="color: inherit;"><span class="med trn">Teeming</span></a></td>
                         <td class="table__cell"><a href="#affix-Necrotic" style="color: inherit;"><span class="hard trn">Necrotic</span></a></td>
                         <td class="table__cell"><a href="#affix-Tyrannical" style="color: inherit;"><span class="hard trn">Tyrannical</span></a></td>
                     </tr>
                     <tr id="wk5" class="table__row">
+                        <td class="table__cell" id="date-wk5"></td>
                         <td class="table__cell"><a href="#affix-Raging" style="color: inherit;"><span class="med trn">Raging</span></a></td>
                         <td class="table__cell"><a href="#affix-Volcanic" style="color: inherit;"><span class="easy trn">Volcanic</span></a></td>
                         <td class="table__cell"><a href="#affix-Tyrannical" style="color: inherit;"><span class="hard trn">Tyrannical</span></a></td>
                     </tr>
                     <tr id="wk6" class="table__row">
+                        <td class="table__cell" id="date-wk6"></td>
                         <td class="table__cell"><a href="#affix-Bolstering" style="color: inherit;"><span class="med trn">Bolstering</span></a></td>
                         <td class="table__cell"><a href="#affix-Skittish" style="color: inherit;"><span class="hard trn">Skittish</span></a></td>
                         <td class="table__cell"><a href="#affix-Fortified" style="color: inherit;"><span class="hard trn">Fortified</span></a></td>
                     </tr>
                     <tr id="wk7" class="table__row">
+                        <td class="table__cell" id="date-wk7"></td>
                         <td class="table__cell"><a href="#affix-Sanguine" style="color: inherit;"><span class="easy trn">Sanguine</span></a></td>
                         <td class="table__cell"><a href="#affix-Overflowing" style="color: inherit;"><span class="easy trn">Overflowing</span></a></td>
                         <td class="table__cell"><a href="#affix-Tyrannical" style="color: inherit;"><span class="hard trn">Tyrannical</span></a></td>
                     </tr>
                     <tr id="wk8" class="table__row">
+                        <td class="table__cell" id="date-wk8"></td>
                         <td class="table__cell"><a href="#affix-Teeming" style="color: inherit;"><span class="med trn">Teeming</span></a></td>
                         <td class="table__cell"><a href="#affix-Skittish" style="color: inherit;"><span class="hard trn">Skittish</span></a></td>
                         <td class="table__cell"><a href="#affix-Fortified" style="color: inherit;"><span class="hard trn">Fortified</span></a></td>
