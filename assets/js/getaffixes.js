@@ -4,19 +4,15 @@ window.getAffixesReady = new Promise(function(resolve) {
 });
 
 function getAffixes() {
-    var rotation = [
-        "tyvora", // 0
-        "foexte", // 1
-        "tygrbo", // 2
-        "fonesa", // 3
-        "tyskbu", // 4
-        "foqute", // 5
-        "tynera", // 6
-        "foskbo", // 7
-        "tyvote", // 8
-        "fogrsa", // 9
-        "tyexbo", // 10
-        "foqubu"  // 11
+        var rotation = [
+        "wk1",
+        "wk2",
+        "wk3",
+        "wk4",
+        "wk5",
+        "wk6",
+        "wk7",
+        "wk8"
     ];
     
     // Epoch: 2026-09-16 09:00 CET (07:00 UTC)
@@ -25,7 +21,7 @@ function getAffixes() {
     var msPerWeek = 7 * 24 * 60 * 60 * 1000;
     
     var weeksDiff = Math.floor((now - epoch) / msPerWeek);
-    var index = (2 + (weeksDiff % 12) + 12) % 12;
+    var index = (1 + (weeksDiff % 8) + 8) % 8;
     
     var currentAffixesId = rotation[index];
     var row = document.getElementById(currentAffixesId);
@@ -39,8 +35,8 @@ function getAffixes() {
     row.classList.add("table__row-both");
     row.classList.remove("table__row");
     
-    var nextIndex = (index + 1) % 12;
-    var wanIndex = (index + 2) % 12;
+    var nextIndex = (index + 1) % 8;
+    var wanIndex = (index + 2) % 8;
     
     var nextRow = document.getElementById(rotation[nextIndex]);
     var wanRow = document.getElementById(rotation[wanIndex]);
