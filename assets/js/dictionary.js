@@ -83,7 +83,7 @@ $(function() {
 	        es: "Potenciante",
 	        pt: "Encorajadora"
 	    },
-	    "Grievous": {
+	    "Overflowing": {
 	        es: "Dolorosa",
 	        pt: "Atrocidade"
 	    },
@@ -409,14 +409,14 @@ $(function() {
 	        pt: "Nota: Separarem-se!"
 	    },
 
-	    grievous_info: {
-	        en: "While below 90% health, players are afflicted with Grievous Wound.",
+	    overflowing_info: {
+	        en: "Overhealing causes the target to gain a healing absorption shield for three times the amount overhealed.",
 	        es: "Cuando estáis heridos y os queda menos del 90% de salud, recibiréis daño creciente en el tiempo hasta que os curen y recuperéis al menos el 90% de esta.",
 	        pt: "Quando são feridos e chegam a menos de 90% dos pontos de vida, os jogadores sofrem dano crescente ao longo do tempo até serem curados acima de 90% dos pontos de vida."
 	    },
 
-	    grievous_note: {
-	        en: "Note: You bleed until you are healed above 90%. Finally, another reason to blame your healer!",
+	    overflowing_note: {
+	        en: "Note: only people specced as healer will trigger this effect. Self-heals do not count toward the healing absorption shield. The shield is not additive.",
 	        es: "Nota: Sangrarás hasta que se te cure por encima del 90%. ¡Finalmente, otra razón para culpar a tu healer (¿no hay nada que curar?)!",
 	        pt: "Nota: Você sangrará enquanto não se curar mais de 90%. Finalmente, outro motivo para culpar seu healer!"
 	    },
