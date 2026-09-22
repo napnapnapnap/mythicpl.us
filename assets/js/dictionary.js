@@ -21,9 +21,9 @@ $(function() {
 	        pt: "Quais são os desafios que vou enfrentar esta semana em minha mítica+?"
 	    },
 
-        "By request, here's a <a href=\"https://www.patreon.com/mythicplus\">Patreon link</a>. Thank you for your continued support.<br>As always, hit me up on <a href=\"https://discord.gg/Z7GPUw8\">discord</a>: domain#2722 or at the <a href=\"https://github.com/domainzero/mythicpl.us\">github</a>.": {
-	        es: "Por petición, aquí está el enlace <a href=\"https://www.patreon.com/mythicplus\">del Patreon</a>. Gracias por tu apoyo.<br>Como siempre, buscame en <a href=\"https://discord.gg/Z7GPUw8\">discord</a>: domain#2722 o si quieres en <a href=\"https://github.com/domainzero/mythicpl.us\">github</a>.",
-	        pt: "Atendendo a pedidos, compartilho o <a href=\"https://www.patreon.com/mythicplus\">link do Patreon</a>. Obrigado pelo seu apoio.<br>Como sempre, estou em <a href=\"https://discord.gg/Z7GPUw8\">discord</a>: domain#2722 ou no <a href=\"https://github.com/domainzero/mythicpl.us\">github</a>."
+        "By request, here's a <a href=\"https://www.patreon.com/mythicplus\">Patreon link</a>. Thank you for your continued support.<br>As always, hit me up on <a href=\"https://discord.gg/Z7GPUw8\">discord</a>: domain#2722 or at the <a href=\"https://github.com/napnapnapnap/mythicpl.us\">github</a>.": {
+	        es: "Por petición, aquí está el enlace <a href=\"https://www.patreon.com/mythicplus\">del Patreon</a>. Gracias por tu apoyo.<br>Como siempre, buscame en <a href=\"https://discord.gg/Z7GPUw8\">discord</a>: domain#2722 o si quieres en <a href=\"https://github.com/napnapnapnap/mythicpl.us\">github</a>.",
+	        pt: "Atendendo a pedidos, compartilho o <a href=\"https://www.patreon.com/mythicplus\">link do Patreon</a>. Obrigado pelo seu apoio.<br>Como sempre, estou em <a href=\"https://discord.gg/Z7GPUw8\">discord</a>: domain#2722 ou no <a href=\"https://github.com/napnapnapnap/mythicpl.us\">github</a>."
 	    },
 
 		"Graphs": {
@@ -670,15 +670,10 @@ $(function() {
 	        pt: "discord: domain#2722 OU também pelo <a href=\"https://discord.gg/Z7GPUw8\">discord oficial de mythicpl.us ;)</a>"
 	    },
 
-	    "open an issue at <a href=\"https://github.com/domainzero/mythicpl.us/issues\">GitHub</a>": {
-	        es: "abrir un ticket en <a href=\"https://github.com/domainzero/mythicpl.us/issues\">GitHub</a>",
-	        pt: "criar incidencia em <a href=\"https://github.com/domainzero/mythicpl.us/issues\">GitHub</a>"
+	    "open an issue at <a href=\"https://github.com/napnapnapnap/mythicpl.us/issues\">GitHub</a>": {
+	        es: "abrir un ticket en <a href=\"https://github.com/napnapnapnap/mythicpl.us/issues\">GitHub</a>",
+	        pt: "criar incidencia em <a href=\"https://github.com/napnapnapnap/mythicpl.us/issues\">GitHub</a>"
 	    },
-
-		"Feeling generous?": {
-	        es: "¿Te sientes generoso?",
-	        pt: "Sentindo gratidão? Doe:"
-	    },	    
 
 	    "You can verify all my identities <a href=\"https://keybase.io/domain\">here.</a>": {
 	        es: "<a href=\"https://keybase.io/domain\">Aquí</a> están todas las formas en que puedes contactarme.",
