@@ -36,7 +36,9 @@ function getAffixes() {
         if (match) {
             var affixName = match[1];
             var iconStr = '<img src="assets/img/affixes/' + affixName + '.jpg" class="affix-icon-top" alt="' + affixName + '">';
-            return '<div class="affix-wrapper">' + iconStr + htmlStr + '</div>';
+            var modifiedHtml = htmlStr.replace(/(<a[^>]*>)/i, '$1<div class="affix-wrapper">' + iconStr);
+            modifiedHtml = modifiedHtml.replace('</a>', '</div></a>');
+            return modifiedHtml;
         }
         return htmlStr;
     }
