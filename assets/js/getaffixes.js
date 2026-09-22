@@ -34,8 +34,7 @@ function getAffixes() {
     var a2 = row.cells[1].innerHTML;
     var a3 = row.cells[2].innerHTML;
     
-    document.getElementById("thisweekus").innerHTML = "<span class='title__intro trn'>US</span> " + a1 + " " + a2 + " " + a3;
-    document.getElementById("thisweekeu").innerHTML = "<span class='title__intro trn'>EU</span> " + a1 + " " + a2 + " " + a3;
+    document.getElementById("thisweek").innerHTML = a1 + " " + a2 + " " + a3;
     
     row.classList.add("table__row-both");
     row.classList.remove("table__row");
