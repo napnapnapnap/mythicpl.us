@@ -22,7 +22,7 @@
 </head>
 
 <body id="home">
-    <button class="menu-button pulse" id="open-button"><i class="fa fa-fw fa-cog"></i><span>Open Menu</span></button>
+    
     <title class="trn">What Mythic Plus Garbage Do I Have To Deal With This Week?</title>
     <main class="main" id="this_week">
         <section class="atf content-block">
@@ -34,6 +34,24 @@
                 </div>
             </article>
         </section>
+        <nav id="jump-nav" class="jump-nav">
+            <button class="jump-nav__toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+            <div class="jump-nav__links">
+                <a href="#this_week" class="trn">This Week</a>
+                <a href="#graphs" class="trn">Graphs</a>
+                <a href="#affixes-div" class="trn">Affixes</a>
+                <a href="#how-to-improve" class="trn">Improve</a>
+                <a href="#group-finding" class="trn">Groups</a>
+                <a href="#useful-stuff" class="trn">Resources</a>
+                <a href="#keystone-upgrade" class="trn">Timers</a>
+                <a href="#loot-stuff" class="trn">Loot</a>
+                <!-- Translators -->
+                <a href="#" class="lang_selector trn" data-value="en">EN</a>
+                <a href="#" class="lang_selector trn" data-value="es">ES</a>
+                <a href="#" class="lang_selector trn" data-value="pt">PT</a>
+            </div>
+        </nav>
+
         <section class="next content-block content-block--small">
             <h4 class="title title--small tagline trn">Next week <span id="date-nextweek"></span></h4>
             <article>
@@ -527,26 +545,7 @@
                 </div>
             </div>
         </section>
-        <div class="menu-wrap">
-            <nav class="menu">
-                <div class="profile"></div>
-                <div class="link-list">
-                    <a href="#this_week"><span class="trn">This Week</span></a>
-                    <a href="#graphs"><span class="trn">Graphs</span></a>
-                    <a href="#affixes-div"><span class="trn">Affixes</span></a>
-                                        <a href="#how-to-improve"><span class="trn">Improve</span></a>
-                    <a href="#group-finding"><span class="trn">Groups</span></a>
-                    <a href="#useful-stuff"><span class="trn">Resources</span></a>
-                    <a href="#keystone-upgrade"><span class="trn">Timers</span></a>
-                    <a href="#loot-stuff"><span class="trn">Loot</span></a>
-                </div>
-                <div class="link-list">
-                    <a class="btn btn-default lang_selector trn" href="#" role="button" data-value="en">Translate to English</a>
-                    <a class="btn btn-default lang_selector trn" href="#" role="button" data-value="es">Traducir al Español (ES)</a>
-                    <a class="btn btn-default lang_selector trn" href="#" role="button" data-value="pt">Traduzir ao Português (BR)</a>
-                </div>
-            </nav>
-        </div>
+        
 <footer class="footer">
             <ul>
                 <li class="trn">open an issue at <a href="https://github.com/napnapnapnap/mythicpl.us/issues">GitHub</a></li>
@@ -563,9 +562,10 @@
 	<script type="text/javascript" src="assets/js/jquery.translate.js?v=20260922"></script>
     <script type="text/javascript" src="assets/js/dictionary.js?v=20260922"></script>
 	<script type="text/javascript" src="assets/js/chart.bundle.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/classie.js"></script>
+    
+    
     <script type="text/javascript" src="assets/js/charts.js"></script>
+    <script type="text/javascript" src="assets/js/nav.js"></script>
 <script>
         ! function(a, b, c, d, e, f, g) {
             a.GoogleAnalyticsObject = e, a[e] = a[e] || function() {
