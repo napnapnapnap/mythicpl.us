@@ -1,3 +1,8 @@
+:root {
+    --background: #373c44;
+    --green: #4CAF50;
+    --note: #7d8194;
+}
 .back>ul>a,
 .nav>ul>a,
 .pulse {
