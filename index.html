@@ -29,7 +29,7 @@
             <h4 class="title title--small tagline trn">what m+ garbage do i have to deal with this week? <span id="date-thisweek"></span></h4>
             <article class="affixes">
                                 <h1 id="thisweek" class="title title--large"></h1><br>
-                <div style="margin-bottom: 20px;"><button class="btn btn-default trn" onclick="copyThisWeekAffixes(this)">Copy to WoW</button> <button class="btn btn-default trn" onclick="copyThisWeekAffixesDiscord(this)">Copy to Discord</button></div>
+                <div style="margin-bottom: 20px; text-align: center;"><button class="btn btn-default trn" onclick="copyWeekAffixes(this, '#thisweek', 'This week\'s affixes')">Copy to WoW</button> <button class="btn btn-default trn" onclick="copyWeekAffixesDiscord(this, '#thisweek', 'This week\'s affixes')">Copy to Discord/Stoat</button></div>
                 <div class="arrow">
                     ↓
                 </div>
@@ -55,11 +55,13 @@
         <section class="next content-block content-block--small">
             <h4 class="title title--small tagline trn">Next week <span id="date-nextweek"></span></h4>
             <article>
-                <h4 id="nextweek" class="title title--small"></h4>
+                                <h4 id="nextweek" class="title title--small"></h4>
+                <div style="margin-bottom: 20px; text-align: center;"><button class="btn btn-default trn" onclick="copyWeekAffixes(this, '#nextweek', 'Next week\'s affixes')">Copy to WoW</button> <button class="btn btn-default trn" onclick="copyWeekAffixesDiscord(this, '#nextweek', 'Next week\'s affixes')">Copy to Discord/Stoat</button></div>
             </article>
             <h4 class="next title--small tagline trn">Week after next <span id="date-weekafternext"></span></h4>
             <article>
-                <h4 id="weekafternext" class="title title--small"></h4>
+                                <h4 id="weekafternext" class="title title--small"></h4>
+                <div style="margin-bottom: 20px; text-align: center;"><button class="btn btn-default trn" onclick="copyWeekAffixes(this, '#weekafternext', 'Week after next\'s affixes')">Copy to WoW</button> <button class="btn btn-default trn" onclick="copyWeekAffixesDiscord(this, '#weekafternext', 'Week after next\'s affixes')">Copy to Discord/Stoat</button></div>
             </article>
         </section>
         <section id="affixes-div" class="content-block">
@@ -75,22 +77,22 @@
                 </h3>
                 <ul class="affixes-list">
                     <li class="affixes-list__item-4-7" id="affix-Bolstering">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Bolstering.jpg" class="affix-icon-list" alt="Bolstering"><span class="med trn" data-trn-key="Bolstering" style="font-size: 2em;padding-left: 0.5em;">Bolstering</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Bolstering')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Bolstering')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Bolstering.jpg" class="affix-icon-list" alt="Bolstering"><span class="med trn" data-trn-key="Bolstering" style="font-size: 2em;padding-left: 0.5em;">Bolstering</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Bolstering')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Bolstering')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="bolstering_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="bolstering_note"></p>
                     </li>
                     <li class="affixes-list__item-4-7" id="affix-Raging">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Raging.jpg" class="affix-icon-list" alt="Raging"><span class="med trn" data-trn-key="Raging" style="font-size: 2em;padding-left: 0.5em;">Raging</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Raging')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Raging')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Raging.jpg" class="affix-icon-list" alt="Raging"><span class="med trn" data-trn-key="Raging" style="font-size: 2em;padding-left: 0.5em;">Raging</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Raging')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Raging')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="raging_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="raging_note"></p>
                     </li>
                     <li class="affixes-list__item-4-7" id="affix-Sanguine">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Sanguine.jpg" class="affix-icon-list" alt="Sanguine"><span class="easy trn" data-trn-key="Sanguine" style="font-size: 2em;padding-left: 0.5em;">Sanguine</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Sanguine')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Sanguine')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Sanguine.jpg" class="affix-icon-list" alt="Sanguine"><span class="easy trn" data-trn-key="Sanguine" style="font-size: 2em;padding-left: 0.5em;">Sanguine</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Sanguine')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Sanguine')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="sanguine_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="sanguine_note"></p>
                     </li>
                     <li class="affixes-list__item-4-7" id="affix-Teeming">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Teeming.jpg" class="affix-icon-list" alt="Teeming"><span class="med trn" data-trn-key="Teeming" style="font-size: 2em;padding-left: 0.5em;">Teeming</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Teeming')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Teeming')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Teeming.jpg" class="affix-icon-list" alt="Teeming"><span class="med trn" data-trn-key="Teeming" style="font-size: 2em;padding-left: 0.5em;">Teeming</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Teeming')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Teeming')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="teeming_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="teeming_note"></p>
                     </li>
@@ -102,22 +104,22 @@
                 </h3>
                 <ul class="affixes-list">
                     <li class="affixes-list__item-4-7" id="affix-Necrotic">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Necrotic.jpg" class="affix-icon-list" alt="Necrotic"><span class="hard trn" data-trn-key="Necrotic" style="font-size: 2em;padding-left: 0.5em;">Necrotic</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Necrotic')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Necrotic')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Necrotic.jpg" class="affix-icon-list" alt="Necrotic"><span class="hard trn" data-trn-key="Necrotic" style="font-size: 2em;padding-left: 0.5em;">Necrotic</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Necrotic')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Necrotic')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="necrotic_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="necrotic_note"></p>
                     </li>
                     <li class="affixes-list__item-4-7" id="affix-Skittish">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Skittish.jpg" class="affix-icon-list" alt="Skittish"><span class="hard trn" data-trn-key="Skittish" style="font-size: 2em;padding-left: 0.5em;">Skittish</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Skittish')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Skittish')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Skittish.jpg" class="affix-icon-list" alt="Skittish"><span class="hard trn" data-trn-key="Skittish" style="font-size: 2em;padding-left: 0.5em;">Skittish</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Skittish')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Skittish')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="skittish_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="skittish_note"></p>
                     </li>
                     <li class="affixes-list__item-4-7" id="affix-Volcanic">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Volcanic.jpg" class="affix-icon-list" alt="Volcanic"><span class="easy trn" data-trn-key="Volcanic" style="font-size: 2em;padding-left: 0.5em;">Volcanic</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Volcanic')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Volcanic')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Volcanic.jpg" class="affix-icon-list" alt="Volcanic"><span class="easy trn" data-trn-key="Volcanic" style="font-size: 2em;padding-left: 0.5em;">Volcanic</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Volcanic')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Volcanic')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="volcanic_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="volcanic_note"></p>
                     </li>
                     <li class="affixes-list__item-4-7" id="affix-Overflowing">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Overflowing.jpg" class="affix-icon-list" alt="Overflowing"><span class="easy trn" data-trn-key="Overflowing" style="font-size: 2em;padding-left: 0.5em;">Overflowing</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Overflowing')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Overflowing')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Overflowing.jpg" class="affix-icon-list" alt="Overflowing"><span class="easy trn" data-trn-key="Overflowing" style="font-size: 2em;padding-left: 0.5em;">Overflowing</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Overflowing')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Overflowing')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="overflowing_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="overflowing_note"></p>
                     </li>
@@ -130,12 +132,12 @@
                 </h3>
                 <ul class="affixes-list">
                     <li class="affixes-list__item-10" id="affix-Fortified">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Fortified.jpg" class="affix-icon-list" alt="Fortified"><span class="hard trn" data-trn-key="Fortified" style="font-size: 2em;padding-left: 0.5em;">Fortified</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Fortified')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Fortified')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Fortified.jpg" class="affix-icon-list" alt="Fortified"><span class="hard trn" data-trn-key="Fortified" style="font-size: 2em;padding-left: 0.5em;">Fortified</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Fortified')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Fortified')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="fortified_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="fortified_note"></p>
                     </li>
                     <li class="affixes-list__item-10" id="affix-Tyrannical">
-                        <div class="affix-icon-container"><img src="assets/img/affixes/Tyrannical.jpg" class="affix-icon-list" alt="Tyrannical"><span class="hard trn" data-trn-key="Tyrannical" style="font-size: 2em;padding-left: 0.5em;">Tyrannical</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Tyrannical')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Tyrannical')">Copy to Discord</button></div>
+                        <div class="affix-icon-container"><img src="assets/img/affixes/Tyrannical.jpg" class="affix-icon-list" alt="Tyrannical"><span class="hard trn" data-trn-key="Tyrannical" style="font-size: 2em;padding-left: 0.5em;">Tyrannical</span><button class="btn btn-default trn" style="margin-left: 15px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescription(this, 'Tyrannical')">Copy to WoW</button><button class="btn btn-default trn" style="margin-left: 5px; padding: 2px 10px; font-size: 0.45em; border-radius: 4px;" onclick="copyAffixDescriptionDiscord(this, 'Tyrannical')">Copy to Discord/Stoat</button></div>
                         <p class="trn" data-trn-key="tyrannical_info"></p>
                         <p class="affixes-list__note trn" data-trn-key="tyrannical_note"></p>
                     </li>
