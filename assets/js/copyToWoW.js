@@ -107,7 +107,7 @@ function copyThisWeekAffixesDiscord(btnElement) {
     var a2 = imgs[1] ? imgs[1].alt : "";
     var a3 = imgs[2] ? imgs[2].alt : "";
     
-    var msg = "This week's affixes: " + getDiscordLink(a1) + ", " + getDiscordLink(a2) + ", " + getDiscordLink(a3);
+    var msg = "This week's affixes: " + getDiscordLink(a1) + ", " + getDiscordLink(a2) + ", " + getDiscordLink(a3) + " - more info at [mythicpl.us](https://napnapnapnap.github.io/mythicpl.us/)";
     executeCopyToDiscord(msg, btnElement);
 }
 
@@ -118,6 +118,6 @@ function copyAffixDescriptionDiscord(btnElement, affixName) {
     
     description = description.replace(/\s+/g, ' ').trim();
     
-    var msg = "**" + getDiscordLink(affixName) + "**: " + description;
+    var msg = "**" + getDiscordLink(affixName) + "**: " + description + " - more info at [mythicpl.us](https://napnapnapnap.github.io/mythicpl.us/)";
     executeCopyToDiscord(msg, btnElement);
 }
