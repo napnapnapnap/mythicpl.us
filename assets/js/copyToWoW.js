@@ -11,16 +11,13 @@ var affixSpellIds = {
     "Tyrannical": 209278
 };
 
-function getWoWLink(affixName) {
+function getSpellMacro(affixName) {
     var spellId = affixSpellIds[affixName];
-    if (!spellId) return affixName;
-    return "|cff71d5ff|Hspell:" + spellId + "|h[" + affixName + "]|h|r";
+    if (!spellId) return '""';
+    return "GetSpellLink(" + spellId + ")";
 }
 
-function executeCopyToWoW(text, btnElement) {
-    // using | instead of \124 is perfectly fine inside SetText() and saves massive character limits
-    var script = '/run local b=ChatEdit_ChooseBoxForSend();ChatEdit_ActivateChat(b);b:SetText("' + text.replace(/"/g, '\\"') + '");';
-    
+function executeCopyToWoW(script, btnElement) {
     if (navigator.clipboard) {
         navigator.clipboard.writeText(script).then(function() {
             triggerCopiedFeedback(btnElement);
@@ -28,7 +25,6 @@ function executeCopyToWoW(text, btnElement) {
             console.error("Could not copy text: ", err);
         });
     } else {
-        // Fallback for older browsers
         var textArea = document.createElement("textarea");
         textArea.value = script;
         document.body.appendChild(textArea);
@@ -57,14 +53,21 @@ function copyThisWeekAffixes(btnElement) {
     var a1 = document.querySelector("#thisweek .affix-wrapper:nth-child(1) img").alt;
     var a2 = document.querySelector("#thisweek .affix-wrapper:nth-child(2) img").alt;
     var a3 = document.querySelector("#thisweek .affix-wrapper:nth-child(3) img").alt;
-    var msg = "This week's affixes: " + getWoWLink(a1) + ", " + getWoWLink(a2) + ", " + getWoWLink(a3);
-    executeCopyToWoW(msg, btnElement);
+    
+    var script = '/run SendChatMessage("This week\'s affixes: "..' + getSpellMacro(a1) + '..", "..' + getSpellMacro(a2) + '..", "..' + getSpellMacro(a3) + ', "PARTY")';
+    executeCopyToWoW(script, btnElement);
 }
 
 function copyAffixDescription(btnElement, affixName) {
     var li = btnElement.closest('li');
     var p = li.querySelector('p.trn'); 
-    var description = p.innerText;
-    var msg = getWoWLink(affixName) + ": " + description;
-    executeCopyToWoW(msg, btnElement);
+    var description = p.innerText || p.textContent;
+    
+    // Clean up newlines and extra spaces that break WoW macros
+    description = description.replace(/\s+/g, ' ').trim();
+    // Escape double quotes for Lua string
+    description = description.replace(/"/g, '\\"');
+    
+    var script = '/run SendChatMessage(' + getSpellMacro(affixName) + '..": ' + description + '", "PARTY")';
+    executeCopyToWoW(script, btnElement);
 }
