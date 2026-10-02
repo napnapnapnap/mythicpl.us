@@ -50,9 +50,10 @@ function triggerCopiedFeedback(btnElement) {
 }
 
 function copyThisWeekAffixes(btnElement) {
-    var a1 = document.querySelector("#thisweek .affix-wrapper:nth-child(1) img").alt;
-    var a2 = document.querySelector("#thisweek .affix-wrapper:nth-child(2) img").alt;
-    var a3 = document.querySelector("#thisweek .affix-wrapper:nth-child(3) img").alt;
+    var imgs = document.querySelectorAll("#thisweek img");
+    var a1 = imgs[0] ? imgs[0].alt : "";
+    var a2 = imgs[1] ? imgs[1].alt : "";
+    var a3 = imgs[2] ? imgs[2].alt : "";
     
     var script = '/run SendChatMessage("This week\'s affixes: "..' + getSpellMacro(a1) + '..", "..' + getSpellMacro(a2) + '..", "..' + getSpellMacro(a3) + ', "PARTY")';
     executeCopyToWoW(script, btnElement);
@@ -101,9 +102,10 @@ function executeCopyToDiscord(text, btnElement) {
 }
 
 function copyThisWeekAffixesDiscord(btnElement) {
-    var a1 = document.querySelector("#thisweek .affix-wrapper:nth-child(1) img").alt;
-    var a2 = document.querySelector("#thisweek .affix-wrapper:nth-child(2) img").alt;
-    var a3 = document.querySelector("#thisweek .affix-wrapper:nth-child(3) img").alt;
+    var imgs = document.querySelectorAll("#thisweek img");
+    var a1 = imgs[0] ? imgs[0].alt : "";
+    var a2 = imgs[1] ? imgs[1].alt : "";
+    var a3 = imgs[2] ? imgs[2].alt : "";
     
     var msg = "This week's affixes: " + getDiscordLink(a1) + ", " + getDiscordLink(a2) + ", " + getDiscordLink(a3);
     executeCopyToDiscord(msg, btnElement);
