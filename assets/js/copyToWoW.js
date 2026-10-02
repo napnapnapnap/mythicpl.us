@@ -55,7 +55,7 @@ function copyThisWeekAffixes(btnElement) {
     var a2 = imgs[1] ? imgs[1].alt : "";
     var a3 = imgs[2] ? imgs[2].alt : "";
     
-    var script = '/run SendChatMessage("This week\'s affixes: "..' + getSpellMacro(a1) + '..", "..' + getSpellMacro(a2) + '..", "..' + getSpellMacro(a3) + ', "PARTY")';
+    var script = '/run local b=ChatEdit_ChooseBoxForSend()SendChatMessage("This week\'s affixes: "..' + getSpellMacro(a1) + '..", "..' + getSpellMacro(a2) + '..", "..' + getSpellMacro(a3) + ',b:GetAttribute("chatType"),nil,b:GetAttribute("channelTarget"))';
     executeCopyToWoW(script, btnElement);
 }
 
@@ -69,7 +69,7 @@ function copyAffixDescription(btnElement, affixName) {
     // Escape double quotes for Lua string
     description = description.replace(/"/g, '\\"');
     
-    var script = '/run SendChatMessage(' + getSpellMacro(affixName) + '..": ' + description + '", "PARTY")';
+    var script = '/run local b=ChatEdit_ChooseBoxForSend()SendChatMessage(' + getSpellMacro(affixName) + '..": ' + description + '",b:GetAttribute("chatType"),nil,b:GetAttribute("channelTarget"))';
     executeCopyToWoW(script, btnElement);
 }
 
