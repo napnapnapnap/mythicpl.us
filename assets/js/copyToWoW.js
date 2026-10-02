@@ -1,19 +1,12 @@
 var affixSpellIds = {
     "Bolstering": 209859,
     "Necrotic": 209858,
-    "Overflowing": 221336,
-    "Raging": 209862,
-    "Sanguine": 226568,
-    "Skittish": 209861,
-    "Teeming": 209856,
-    "Volcanic": 209855,
-    "Fortified": 209279,
-    "Tyrannical": 209278
+    "Sanguine": 226512
 };
 
 function getSpellMacro(affixName) {
     var spellId = affixSpellIds[affixName];
-    if (!spellId) return '""';
+    if (!spellId) return '"' + affixName + '"';
     return "GetSpellLink(" + spellId + ")";
 }
 
