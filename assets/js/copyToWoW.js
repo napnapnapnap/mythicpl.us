@@ -71,3 +71,51 @@ function copyAffixDescription(btnElement, affixName) {
     var script = '/run SendChatMessage(' + getSpellMacro(affixName) + '..": ' + description + '", "PARTY")';
     executeCopyToWoW(script, btnElement);
 }
+
+function getDiscordLink(affixName) {
+    var spellId = affixSpellIds[affixName];
+    if (!spellId) return affixName;
+    return "[" + affixName + "](https://legion-shoot.tauri.hu/?spell=" + spellId + ")";
+}
+
+function executeCopyToDiscord(text, btnElement) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+            triggerCopiedFeedback(btnElement);
+        }).catch(function(err) {
+            console.error("Could not copy text: ", err);
+        });
+    } else {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            triggerCopiedFeedback(btnElement);
+        } catch (err) {
+            console.error("Could not copy text: ", err);
+        }
+        document.body.removeChild(textArea);
+    }
+}
+
+function copyThisWeekAffixesDiscord(btnElement) {
+    var a1 = document.querySelector("#thisweek .affix-wrapper:nth-child(1) img").alt;
+    var a2 = document.querySelector("#thisweek .affix-wrapper:nth-child(2) img").alt;
+    var a3 = document.querySelector("#thisweek .affix-wrapper:nth-child(3) img").alt;
+    
+    var msg = "This week's affixes: " + getDiscordLink(a1) + ", " + getDiscordLink(a2) + ", " + getDiscordLink(a3);
+    executeCopyToDiscord(msg, btnElement);
+}
+
+function copyAffixDescriptionDiscord(btnElement, affixName) {
+    var li = btnElement.closest('li');
+    var p = li.querySelector('p.trn'); 
+    var description = p.innerText || p.textContent;
+    
+    description = description.replace(/\s+/g, ' ').trim();
+    
+    var msg = "**" + getDiscordLink(affixName) + "**: " + description;
+    executeCopyToDiscord(msg, btnElement);
+}
