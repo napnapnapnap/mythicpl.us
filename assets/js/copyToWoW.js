@@ -63,7 +63,7 @@ function copyAffixDescription(btnElement, affixName) {
     // Escape double quotes for Lua string
     description = description.replace(/"/g, '\\"');
     
-    var prefix = '/run local e=ChatEdit_ChooseBoxForSend()local t=e:GetAttribute("chatType")SendChatMessage(' + getSpellMacro(affixName) + '..": "';
+    var prefix = '/run local e=ChatEdit_ChooseBoxForSend()local t=e:GetAttribute("chatType")SendChatMessage(' + getSpellMacro(affixName) + '..": ';
     var suffix = '",t,nil,e:GetAttribute("channelTarget"))';
     
     // Calculate space for description to ensure macro stays <= 255 chars
