@@ -4,6 +4,19 @@ var affixSpellIds = {
     "Sanguine": 226512
 };
 
+var wowheadAffixIds = {
+    "Tyrannical": 9,
+    "Fortified": 10,
+    "Necrotic": 4,
+    "Teeming": 5,
+    "Bolstering": 7,
+    "Volcanic": 3,
+    "Raging": 6,
+    "Sanguine": 8,
+    "Overflowing": 1,
+    "Skittish": 2
+};
+
 function getSpellMacro(affixName) {
     var spellId = affixSpellIds[affixName];
     if (!spellId) return '"' + affixName + '"';
@@ -84,8 +97,14 @@ function copyAffixDescription(btnElement, affixName) {
 
 function getDiscordLink(affixName) {
     var spellId = affixSpellIds[affixName];
-    if (!spellId) return affixName;
-    return "[" + affixName + "](https://legion-shoot.tauri.hu/?spell=" + spellId + ")";
+    if (spellId) {
+        return "[" + affixName + "](https://legion-shoot.tauri.hu/?spell=" + spellId + ")";
+    }
+    var wowheadId = wowheadAffixIds[affixName];
+    if (wowheadId) {
+        return "[" + affixName + "](https://www.wowhead.com/affix=" + wowheadId + ")";
+    }
+    return affixName;
 }
 
 function executeCopyToDiscord(text, btnElement) {
