@@ -354,6 +354,7 @@ ul+.title--medium {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
     box-shadow: 0 1px rgba(255, 255, 255, .15)
 }
@@ -1003,6 +1004,7 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 10px;
 }
 .affix-icon-list {
@@ -1014,6 +1016,7 @@ canvas {
 .affix-group-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     margin-top: 10px;
@@ -1035,6 +1038,7 @@ canvas {
     z-index: 10;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 6px 16px;
     padding: 12px 0;
