@@ -84,10 +84,15 @@ function getAffixes() {
     var elWanWeekDate = document.getElementById("date-weekafternext");
     if (elWanWeekDate) elWanWeekDate.innerText = formatDateRange(wanWeekStart);
 
+    var tbody = row.parentNode;
     for (var i = 0; i < 8; i++) {
-        var weeksFromNow = (i - index + 8) % 8;
-        var rowDateStart = epoch + (weeksDiff + weeksFromNow) * msPerWeek;
-        var elRowDate = document.getElementById("date-" + rotation[i]);
+        var rotIndex = (index + i) % 8;
+        var rowEl = document.getElementById(rotation[rotIndex]);
+        if (tbody && rowEl) {
+            tbody.appendChild(rowEl);
+        }
+        var rowDateStart = epoch + (weeksDiff + i) * msPerWeek;
+        var elRowDate = document.getElementById("date-" + rotation[rotIndex]);
         if (elRowDate) {
             elRowDate.innerText = formatDateRange(rowDateStart);
         }
