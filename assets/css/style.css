@@ -1190,3 +1190,16 @@ canvas {
     color: rgba(255, 255, 255, .6);
     font-size: 13px;
 }
+
+/* SimulaTauri guide (How to improve) */
+.sim-shot {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0 16px;
+    border: 1px solid #5c6370;
+    border-radius: 6px;
+}
+.sim-steps li {
+    margin-bottom: 8px;
+}
