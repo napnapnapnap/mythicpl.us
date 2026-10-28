@@ -1147,3 +1147,46 @@ canvas {
     background-color: var(--green);
     border-color: var(--green);
 }
+
+/* Affix tooltips (assets/js/affixTooltips.js) */
+.affix-tooltip {
+    position: fixed;
+    z-index: 1000;
+    width: 320px;
+    max-width: calc(100vw - 16px);
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #5c6370;
+    border-radius: 6px;
+    background: rgba(16, 18, 24, .96);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .5);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+    pointer-events: none;
+}
+.affix-tooltip[hidden] {
+    display: none;
+}
+.affix-tooltip__head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+}
+.affix-tooltip__head img {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+}
+.affix-tooltip p {
+    margin: 6px 0 0;
+}
+.affix-tooltip__level {
+    color: #ffd100;
+}
+.affix-tooltip__note {
+    color: rgba(255, 255, 255, .6);
+    font-size: 13px;
+}
