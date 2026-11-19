@@ -1040,6 +1040,11 @@ $(function() {
 			pt: "AP base",
 			fr: "AP de base"
 		},
+		"AP (AK 25)": {
+			es: "AP (AK 25)",
+			pt: "AP (AK 25)",
+			fr: "AP (AK 25)"
+		},
 		"Current AP In Level": {
 			es: "AP actual en el nivel",
 			pt: "AP atual no nível",
