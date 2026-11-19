@@ -638,30 +638,40 @@ $(function() {
 			pt: "O baú ao final da corrida garante ao <strong>GRUPO</strong> dois itens do saqueio da masmorra. Se você superar o cronometro, ganhará um item extra ao saquear.",
 			fr: "Le coffre à la fin du donjon garantit au <strong>GROUPE</strong> deux pièces de butin issues de la table de butin du donjon. Si vous battez le chronomètre, vous recevrez une pièce de butin supplémentaire."
 		},
+		"Beating the timer with 20% of the timer remaining will grant a new (second) chest with 1 item from one tier higher, while beating the timer with 40% of the timer remaining will add a third chest with 1 item from two tiers higher.": {
+			es: "Superar el cronómetro con un 20% del tiempo restante otorgará un nuevo (segundo) cofre con 1 objeto de un nivel superior, mientras que superar el cronómetro con un 40% del tiempo restante añadirá un tercer cofre con 1 objeto de dos niveles superiores.",
+			pt: "Superar o cronômetro com 20% do tempo restante concederá um novo (segundo) baú com 1 item de um nível acima, enquanto superar o cronômetro com 40% do tempo restante adicionará um terceiro baú com 1 item de dois níveis acima.",
+			fr: "Battre le chronomètre avec 20% du temps restant accordera un nouveau (deuxième) coffre contenant 1 objet d'un palier supérieur, tandis que battre le chronomètre avec 40% du temps restant ajoutera un troisième coffre contenant 1 objet de deux paliers supérieurs."
+		},
+		"Beating a level 8 keystone with more than 40% of the timer remaining will spawn 3 chests containing a total of THREE items of Mythic +8, ONE item of Mythic +9, and ONE item of Mythic +10.": {
+			es: "Superar una piedra angular de nivel 8 con más del 40% del tiempo restante hará que aparezcan 3 cofres que contendrán un total de TRES objetos de Mítica +8, UN objeto de Mítica +9 y UN objeto de Mítica +10.",
+			pt: "Superar uma pedra-chave de nível 8 com mais de 40% do tempo restante fará surgir 3 baús contendo um total de TRÊS itens de Mítica +8, UM item de Mítica +9 e UM item de Mítica +10.",
+			fr: "Terminer une clé de niveau 8 avec plus de 40% du temps restant fera apparaître 3 coffres contenant un total de TROIS objets de Mythique +8, UN objet de Mythique +9 et UN objet de Mythique +10."
+		},
 		"In addition, roughly every 3 difficulty levels past 15 will award you with an additional piece of loot.": {
 			es: "Además, aproximadamente a cada 3 niveles de dificultad después del 15 (ejemplo: 18, 21, 24) te otorgarán una pieza adicional de botín.",
 			pt: "Além disso, aproximadamente a cada 3 níveis de dificuldade depois de 15, te entregará um item adicional ao saquear.",
 			fr: "De plus, environ tous les 3 niveaux de difficulté au-delà de 15 vous accorderont une pièce de butin supplémentaire."
 		},
-		"Example time! You beat a level 15 keystone within the timer and your group is awarded 3 pieces of loot. Later, you beat a level 18 keystone within the timer and your group SHOULD BE awarded with 4 pieces of loot. Repeat every three levels. 21 = 5 pieces of loot, 24 = 6 pieces of loot, etc.": {
-			es: "¡Venga, a poner un ejemplo! Tú consigues una piedra angular de nivel 15 dentro del tiempo y tu grupo recibe 3 piezas de botín. </br>Más tarde, superas una piedra angular de nivel 18 en tiempo y tu grupo DEBERÍA recibir 4 piezas de botín. </br>Esto se repite cada tres niveles. 21 = 5 piezas de botín, 24 = 6 piezas de botín, etc.",
-			pt: "Se liga ai que é hora da revisão: - Você consegue finalizar uma pedra-chave de nível 15 dentro do cronometro e seu grupo recebe 3 itens do saqueio. </br>Mais tarde, você finaliza uma pedra-chave de nível 18 dentro do tempo e seu grupo DEVERIA ser premiado com 4 itens ao saquear. </br>Agora, repita o mesmo exercício a cada três níveis. 21 = 5 itens de saqueio, 24 = 6 itens de saqueio, etc.",
-			fr: "Exemple ! Vous terminez une clé de niveau 15 dans les temps et votre groupe reçoit 3 pièces de butin. Plus tard, vous terminez une clé de niveau 18 dans les temps et votre groupe DEVRAIT recevoir 4 pièces de butin. Répétez tous les trois niveaux : 21 = 5 pièces de butin, 24 = 6 pièces de butin, etc."
+		"Example time! You beat a level 15 keystone within the timer and your group is awarded 3 pieces of loot. Later, you beat a level 18 keystone within the timer and your group is awarded 4 pieces of loot. Repeat every three levels. 21 = 5 pieces of loot, 24 = 6 pieces of loot, etc.": {
+			es: "¡Venga, a poner un ejemplo! Tú consigues una piedra angular de nivel 15 dentro del tiempo y tu grupo recibe 3 piezas de botín. </br>Más tarde, superas una piedra angular de nivel 18 en tiempo y tu grupo recibe 4 piezas de botín. </br>Esto se repite cada tres niveles. 21 = 5 piezas de botín, 24 = 6 piezas de botin, etc.",
+			pt: "Se liga ai que é hora da revisão: - Você consegue finalizar uma pedra-chave de nível 15 dentro do cronometro e seu grupo recebe 3 itens do saqueio. </br>Mais tarde, você finaliza uma pedra-chave de nível 18 dentro do tempo e seu grupo é premiado com 4 itens ao saquear. </br>Agora, repita o mesmo exercício a cada três níveis. 21 = 5 itens de saqueio, 24 = 6 itens de saqueio, etc.",
+			fr: "Exemple ! Vous terminez une clé de niveau 15 dans les temps et votre groupe reçoit 3 pièces de butin. Plus tard, vous terminez une clé de niveau 18 dans les temps et votre groupe reçoit 4 pièces de butin. Répétez tous les trois niveaux : 21 = 5 pièces de butin, 24 = 6 pièces de butin, etc."
 		},
-		"At the start of a week (after raid/mythic reset) a chest will appear in your order hall giving loot based on the highest level keystone dungeon <strong>COMPLETED</strong> the previous week, within the timer or not.": {
-			es: "Al comenzar la semana (después de un reinício de banda o míticas), aparecerá un cofre en la sede de clase con el botín basado en el nivel de</br> dificultad más alto de la mazmorra <strong>FINALIZADA</strong> (sea en tiempo o no).",
-			pt: "No início da semana (depois de reiniciar as raids ou míticas) surgirá um baú no Salão de Classe com o saqueio baseado na masmorra <strong>CONCLUÍDA</strong></br>da semana anterior com o nível de dificuldade mais alto, seja em tempo ou não.",
-			fr: "Au début de la semaine (après la réinitialisation des raids/mythiques), un coffre apparaîtra dans votre domaine de classe contenant du butin basé sur le donjon de clé mythique de plus haut niveau <strong>TERMINÉ</strong> la semaine précédente, dans les temps ou non."
+		"At the start of a week (after raid/mythic reset) a chest will appear in your order hall giving loot based on the highest level keystone dungeon <strong>COMPLETED</strong> the previous week, within the timer or not, whether it is your key or someone else's.": {
+			es: "Al comenzar la semana (después de un reinício de banda o míticas), aparecerá un cofre en la sede de clase con el botín basado en el nivel de</br> dificultad más alto de la mazmorra <strong>FINALIZADA</strong> la semana anterior (sea en tiempo o no, ya sea con tu piedra angular o la de otra persona).",
+			pt: "No início da semana (depois de reiniciar as raids ou míticas) surgirá um baú no Salão de Classe com o saqueio baseado na masmorra <strong>CONCLUÍDA</strong></br>da semana anterior com o nível de dificuldade mais alto, seja em tempo ou não, seja a pedra-chave sua ou de outra pessoa.",
+			fr: "Au début de la semaine (après la réinitialisation des raids/mythiques), un coffre apparaîtra dans votre domaine de classe contenant du butin basé sur le donjon de clé mythique de plus haut niveau <strong>TERMINÉ</strong> la semaine précédente, dans les temps ou non, que ce soit votre clé ou celle de quelqu'un d'autre."
 		},
 		"In addition, the chest will also have a downgraded keystone based on the highest level keystone run <strong>YOU COMPLETED</strong> in the previous week.": {
 			es: "Además, el cofre también tendrá una piedra angular solo un nivel más bajo comparada con la piedra angular de mayor </br> nivel que <strong>COMPLETASTE</strong> en la semana anterior.",
 			pt: "Além disso, o baú também terá uma pedra-chave rebaixada (somente um nível) baseada na corrida de nível mais alto que <strong>VOCÊ COMPLETOU</ strong> na semana anterior.",
 			fr: "De plus, le coffre contiendra également une clé de niveau inférieur basée sur le donjon de clé mythique de plus haut niveau que <strong>VOUS AVEZ TERMINÉ</strong> la semaine précédente."
 		},
-		"It is most beneficial to complete a +15 weekly to get the highest item level gear every reset. If that isn't feasible go for the next highest you can complete. Again, <strong>you don't need to finish in the timer to get the weekly chest.</strong>": {
-			es: "Es más rentable finalizar una +15 semanalmente para obtener el botín con el nivel más alto en cada reinicio. </br>Si eso no es factible, intenta hacer el nivel más alto que puedas finalizar. </br>El poder de artefacto conseguido en la mazmorra también es más alto dependiendo del nivel de dificultad. Otra vez, <strong>no es necesario finalizar la mazmorra en tiempo para obtener el cofre semanal</strong>",
-			pt: "É muito mais rentável finalizar uma masmorra +15 semanalmente para obter o saqueio com o item de nível mais alto a cada reinício. </br>Se não for possível, tente concluir a masmorra com o nível de dificuldade mais alto que puder. </br><strong>Outra vez, não é necessário finalizar a masmorra dentro do cronometro para obter um item no baú semanal<strong>",
-			fr: "Il est plus avantageux de terminer une +15 chaque semaine pour obtenir l'équipement de plus haut niveau d'objet à chaque réinitialisation. Si ce n'est pas faisable, visez le niveau le plus élevé que vous pouvez terminer. Encore une fois, <strong>vous n'avez pas besoin de finir dans les temps pour obtenir le coffre hebdomadaire.</strong>"
+		"It is most beneficial to complete a +10 weekly (+15 starting in patch 7.1.5) to get the highest item level gear every reset. If that isn't feasible go for the next highest you can complete. Again, <strong>you don't need to finish in the timer to get the weekly chest.</strong>": {
+			es: "Es más rentable finalizar una +10 semanalmente (+15 a partir del parche 7.1.5) para obtener el botín con el nivel más alto en cada reinicio. </br>Si eso no es factible, intenta hacer el nivel más alto que puedas finalizar. </br>El poder de artefacto conseguido en la mazmorra también es más alto dependiendo del nivel de dificultad. Otra vez, <strong>no es necesario finalizar la mazmorra en tiempo para obtener el cofre semanal.</strong>",
+			pt: "É muito mais rentável finalizar uma masmorra +10 semanalmente (+15 a partir do patch 7.1.5) para obter o saqueio com o item de nível mais alto a cada reinício. </br>Se não for possível, tente concluir a masmorra com o nível de dificuldade mais alto que puder. </br><strong>Outra vez, não é necessário finalizar a masmorra dentro do cronometro para obter um item no baú semanal.</strong>",
+			fr: "Il est plus avantageux de terminer une +10 chaque semaine (+15 à partir du patch 7.1.5) pour obtenir l'équipement de plus haut niveau d'objet à chaque réinitialisation. Si ce n'est pas faisable, visez le niveau le plus élevé que vous pouvez terminer. Encore une fois, <strong>vous n'avez pas besoin de finir dans les temps pour obtenir le coffre hebdomadaire.</strong>"
 		},
 		"suggestions welcome. Reach me by:": {
 			es: "sugerencias son bienvenidas. Búscame en:",
@@ -1024,6 +1034,11 @@ $(function() {
 			es: "Cofre semanal de la sede de clase",
 			pt: "Baú semanal do Salão de Classe",
 			fr: "Coffre hebdomadaire de domaine de classe"
+		},
+		"Base AP": {
+			es: "AP base",
+			pt: "AP base",
+			fr: "AP de base"
 		},
 		"Current AP In Level": {
 			es: "AP actual en el nivel",
