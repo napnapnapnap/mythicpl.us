@@ -83,8 +83,8 @@ $(function() {
 			fr: "Galvanisant"
 		},
 		"Overflowing": {
-			es: "Dolorosa",
-			pt: "Atrocidade",
+			es: "Rebosante",
+			pt: "Transbordante",
 			fr: "Débordant"
 		},
 		"Sanguine": {
@@ -303,10 +303,10 @@ $(function() {
 			fr: "(apparaissent à partir des clés +10)"
 		},
 		"bolstering_info": {
-			en: "When any non-boss enemy dies, its death cry empowers nearby allies, temporarily increasing their health by 10%.",
+			en: "When any non-boss enemy dies, its death cry empowers nearby allies, increasing their maximum health and damage by 20%.",
 			es: "Cuando un enemigo que no es un jefe muere, su grito al morir potencia a los aliados cercanos, lo que aumenta su salud y su daño máximos un 20%. Radio del grito 30 metros.",
 			pt: "Quando um inimigo que não é chefe morre, os aliados a 30 metros dele recebem um bônus que aumenta sua vida máxima e seu dano em 20%, e o efeito acumula.",
-			fr: "Lorsqu'un ennemi qui n'est pas un boss meurt, son cri d'agonie renforce les alliés proches, ce qui augmente temporairement leurs points de vie de 10%."
+			fr: "Lorsqu'un ennemi qui n'est pas un boss meurt, son cri d'agonie renforce les alliés proches, ce qui augmente leurs points de vie maximums et leurs dégâts de 20%."
 		},
 		"bolstering_note": {
 			en: "Note: it's important to kill all the trash in a pull as closely together as possible with this affix as mobs effectively heal as they gain max health (percent translation). Adds spawned from a trash mob or boss ability do not trigger bolster. It's possible to reset bolster on mobs by resetting them via wiping or exiting combat.",
@@ -315,10 +315,10 @@ $(function() {
 			fr: "Note : il est important de tuer tous les ennemis d'un pack en même temps avec cet affixe, car les monstres se soignent effectivement lorsqu'ils gagnent des points de vie maximums. Les ennemis invoqués par une compétence d'un monstre ou d'un boss ne déclenchent pas Galvanisant. Il est possible de réinitialiser Galvanisant sur les monstres en sortant de combat ou après un wipe."
 		},
 		"raging_info": {
-			en: "Non-boss enemies enrage at 30% health remaining, temporarily granting immunity to crowd control effects.",
+			en: "Non-boss enemies enrage at 30% health remaining, dealing 100% increased damage until defeated.",
 			es: "Los enemigos que no son jefes se enfuceren cuando alcanzan un 30% de salud, por lo que infligen un 100% más de daño hasta que sean derrotados.",
 			pt: "Os Inimigos que não são chefes ficam enfurecidos ao alcançar 30% de vida, causando 100% mais de dano até serem derrotados.",
-			fr: "Les ennemis qui ne sont pas des boss deviennent enragés lorsqu'il leur reste 30% de points de vie, ce qui les rend temporairement insensibles aux effets de contrôle."
+			fr: "Les ennemis qui ne sont pas des boss deviennent enragés lorsqu'il leur reste 30% de points de vie, ce qui augmente leurs dégâts de 100% jusqu'à leur mort."
 		},
 		"raging_note": {
 			en: "Note: mobs with high damage targeted abilities or high damage AoE abilities become deadly with this affix. Be sure to focus fire mobs down so there aren't multiple enraged mobs at once.",
@@ -424,21 +424,21 @@ $(function() {
 		},
 		"overflowing_info": {
 			en: "Healing in excess of a target's maximum health is instead converted to a heal absorption effect.",
-			es: "Cuando estáis heridos y os queda menos del 90% de salud, recibiréis daño creciente en el tiempo hasta que os curen y recuperéis al menos el 90% de esta.",
-			pt: "Quando são feridos e chegam a menos de 90% dos pontos de vida, os jogadores sofrem dano crescente ao longo do tempo até serem curados acima de 90% dos pontos de vida.",
+			es: "La sanación que excede la salud máxima de un objetivo se convierte en un efecto de absorción de sanación.",
+			pt: "A cura que exceder o máximo de pontos de vida de um alvo é convertida em um efeito de absorção de cura.",
 			fr: "Les soins prodigués au-delà du maximum de points de vie d'une cible sont convertis en un effet d'absorption de soins."
 		},
 		"overflowing_note": {
 			en: "Note: only people specced as healer will trigger this effect. Self-heals do not count toward the healing absorption shield. The shield is not additive.",
-			es: "Nota: Sangrarás hasta que se te cure por encima del 90%. ¡Finalmente, otra razón para culpar a tu healer (¿no hay nada que curar?)!",
-			pt: "Nota: Você sangrará enquanto não se curar mais de 90%. Finalmente, outro motivo para culpar seu healer!",
+			es: "Nota: solo los jugadores con especialización de sanador activan este efecto. Las autocuraciones no cuentan para el escudo de absorción de sanación. El escudo no se acumula.",
+			pt: "Nota: apenas jogadores com especialização de curador ativam este efeito. Autocurar-se não conta para o escudo de absorção de cura. O escudo não é cumulativo.",
 			fr: "Note : seuls les joueurs spécialisés en tant que soigneur déclenchent cet effet. Les soins personnels ne comptent pas dans le bouclier d'absorption de soins. Le bouclier ne se cumule pas."
 		},
 		"fortified_info": {
-			en: "Non-boss enemies have 20% more health and inflict up to 20% increased damage.",
+			en: "Non-boss enemies have 20% more health and inflict up to 30% increased damage.",
 			es: "Los enemigos que no son jefes tienen un 20% más de salud e infligen hasta un 30% más de daño.",
 			pt: "Inimigos que não são chefes têm 20% mais pontos de vida e causam até 30% a mais de dano.",
-			fr: "Les ennemis qui ne sont pas des boss ont 20% de points de vie en plus et infligent jusqu'à 20% de dégâts supplémentaires."
+			fr: "Les ennemis qui ne sont pas des boss ont 20% de points de vie en plus et infligent jusqu'à 30% de dégâts supplémentaires."
 		},
 		"fortified_note": {
 			en: "Note: interrupting and dodging any/all trash mob abilities becomes an absolute priority with this affix. Most of the time spent in the dungeon will be fighting beefy trash, don't be afraid to use CDs.",
@@ -447,10 +447,10 @@ $(function() {
 			fr: "Note : interrompre et esquiver toutes les compétences des monstres devient une priorité absolue avec cet affixe. La majeure partie du temps passé dans le donjon consistera à combattre des packs coriaces, n'ayez pas peur d'utiliser vos temps de recharge (CD)."
 		},
 		"tyrannical_info": {
-			en: "Bosses have 25% more health. Bosses and their minions inflict up to 15% increased damage.",
+			en: "Bosses have 40% more health. Bosses and their minions inflict up to 15% increased damage.",
 			es: "Los jefes enemigos tienen un 40% más de salud e infligen hasta un 15% más de daño.",
 			pt: "Inimigos chefes têm 40% a mais de vida e causam até 15% a mais de dano.",
-			fr: "Les boss ont 25% de points de vie en plus. Les boss et leurs serviteurs infligent jusqu'à 15% de dégâts supplémentaires."
+			fr: "Les boss ont 40% de points de vie en plus. Les boss et leurs serviteurs infligent jusqu'à 15% de dégâts supplémentaires."
 		},
 		"tyrannical_note": {
 			en: "Note: Boss abilities are no longer trivial. Boss mechanics need to be done or people will die. Some fights become endurance tests because they last so long.",
@@ -920,10 +920,10 @@ $(function() {
 			pt: "Lista de preparação para Mítica+",
 			fr: "La check-list Mythique+"
 		},
-		"Utility Potions: <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Skystep</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9295\" target=\"_blank\">Invisibility</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Skaggldrynk</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalanche</a>": {
-			es: "Pociones de utilidad: <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Pasocielo</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9295\" target=\"_blank\">Invisibilidad</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Trago de skaggl</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalancha</a>",
-			pt: "Poções de utilidade: <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Passocéu</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9295\" target=\"_blank\">Invisibilidade</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Skaggldrynk</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalanche</a>",
-			fr: "Potions utilitaires : <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Pas-céleste</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9295\" target=\"_blank\">Invisibilité</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Skaggldrynk</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalanche</a>"
+		"Utility Potions: <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Skystep</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9172\" target=\"_blank\">Invisibility</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Skaggldrynk</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalanche</a>": {
+			es: "Pociones de utilidad: <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Pasocielo</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9172\" target=\"_blank\">Invisibilidad</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Trago de skaggl</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalancha</a>",
+			pt: "Poções de utilidade: <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Passocéu</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9172\" target=\"_blank\">Invisibilidade</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Skaggldrynk</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalanche</a>",
+			fr: "Potions utilitaires : <a href=\"https://legion-shoot.tauri.hu/?item=127841\" target=\"_blank\">Pas-céleste</a>, <a href=\"https://legion-shoot.tauri.hu/?item=9172\" target=\"_blank\">Invisibilité</a> / <a href=\"https://legion-shoot.tauri.hu/?item=127840\" target=\"_blank\">Skaggldrynk</a>, <a href=\"https://legion-shoot.tauri.hu/?item=127839\" target=\"_blank\">Avalanche</a>"
 		},
 		"<a href=\"https://legion-shoot.tauri.hu/?item=120257\" target=\"_blank\">Drums of Fury</a>": {
 			es: "<a href=\"https://legion-shoot.tauri.hu/?item=120257\" target=\"_blank\">Tambores de furia</a>",
@@ -965,10 +965,10 @@ $(function() {
 			pt: " - Cronômetro tudo-em-um para mítica+. Mostra o % dos inimigos nas placas de identificação, tempos necessários para +2/+3 baús e tempos de conclusão dos objetivos com histórico e muito mais.",
 			fr: " - Chronomètre tout-en-un pour Mythique+. Affiche le % des ennemis sur les barres de nom, les temps requis pour +2/+3 coffres et les temps de complétion des objectifs avec historique et plus encore."
 		},
-		" - Shows keys for guild mates, friends and alts. It also shows if your friends/guildies have done a 15+ or not!": {
-			es: " - Muestra las piedras angulares de compañeros de hermandad, amigos y alters. ¡También muestra si tus amigos o compañeros han completado una +15 o no!",
-			pt: " - Mostra as pedras-chave para colegas de guilda, amigos e alts. Também mostra se seus amigos/colegas de guilda fizeram uma +15 ou não!",
-			fr: " - Affiche les clés des membres de la guilde, des amis et des rerolls. Montre également si vos amis/membres de guilde ont terminé une +15 ou non !"
+		" - Shows keys for guild mates, friends and alts. It also shows if your friends/guildies have done a 10+ or not!": {
+			es: " - Muestra las piedras angulares de compañeros de hermandad, amigos y alters. ¡También muestra si tus amigos o compañeros han completado una +10 o no!",
+			pt: " - Mostra as pedras-chave para colegas de guilda, amigos e alts. Também mostra se seus amigos/colegas de guilda fizeram uma +10 ou não!",
+			fr: " - Affiche les clés des membres de la guilde, des amis et des rerolls. Montre également si vos amis/membres de guilde ont terminé une +10 ou non !"
 		},
 		" - The largest Tauri LFG/LFM Discord server.": {
 			es: " - El mayor servidor de Discord de búsqueda de grupo (LFG/LFM) de Tauri.",
@@ -1015,10 +1015,10 @@ $(function() {
 			pt: " - Faz a placa de identificação brilhar em vermelho se o inimigo estiver parado na poça de Sanguínea e exibe um ícone à direita dela.",
 			fr: " - Fait briller la barre de nom en rouge si l'ennemi reste dans une flaque de Sanguin et affiche une icône à sa droite."
 		},
-		"Didn't make the timer? That's ok. Your keystone doesn't deplete anymore, it just levels down by 1 and randomizes the dungeon. i.e. keystone level 5 for Blackrook Hold to keystone level 4 Halls of Valor.": {
-			es: "¿No la has hecho en tiempo? No pasa nada. Tu piedra ya no se agota, simplemente baja un nivel y cambia aleatoriamente de mazmorra. Ejemplo: Piedra angular de nivel 5 de Torreón Grajo Negro pasa a nivel 4 de Cámaras del Valor.",
-			pt: "Não concluiu a tempo? Sem problemas. Sua pedra não se esgota mais, apenas diminui em 1 nível e sorteia outra masmorra. Exemplo: pedra-chave nível 5 de Castelo Corvo Negro passa para nível 4 de Salões da Bravura.",
-			fr: "Vous n'avez pas respecté le chrono ? Ce n'est pas grave. Votre clé ne s'épuise plus, elle baisse simplement d'un niveau et change aléatoirement de donjon (ex. : clé de niveau 5 pour le Bastion du Freux devient clé de niveau 4 pour les Salles des Valeureux)."
+		"Didn't make the timer? Your keystone becomes depleted (stays the same level and dungeon). You still get loot from the run, but a depleted keystone awards no loot until you beat its timer to recharge and upgrade it.": {
+			es: "¿No la has hecho en tiempo? Tu piedra angular se agota (mantiene el mismo nivel y la misma mazmorra). Aún recibes botín de esa carrera, pero una piedra agotada no otorga botín hasta que superes su temporizador para recargarla y mejorarla.",
+			pt: "Não concluiu a tempo? Sua pedra-chave fica esgotada (mantém o mesmo nível e a mesma masmorra). Você ainda recebe o saque dessa corrida, mas uma pedra esgotada não concede saque até que você vença o cronômetro dela para recarregá-la e melhorá-la.",
+			fr: "Vous n'avez pas respecté le chrono ? Votre clé s'épuise (elle garde le même niveau et le même donjon). Vous recevez quand même le butin de ce donjon, mais une clé épuisée ne donne aucun butin tant que vous ne battez pas son chrono pour la recharger et l'améliorer."
 		},
 		"Keystone": {
 			es: "Piedra angular",
